@@ -11,7 +11,12 @@ config_version=3
 [application]
 
 config/name="New Game Project"
+run/main_scene="res://temp.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Single4Life="*res://single.gd"
 
 [rendering]
 
