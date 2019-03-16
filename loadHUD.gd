@@ -24,7 +24,7 @@ func _on_Button_pressed():
 	var id = $nameList.get_selected_items()[0]
 	name = $nameList.get_item_text(id)
 	var file = File.new()
-	if file.open("user://"+name +".sav", File.READ) != 0:
+	if file.open("user://gameSaves/"+name +".sav", File.READ) != 0:
     	print("Error opening file")
     	return
 	metaData.profile=JSON.parse(file.get_as_text()).result
