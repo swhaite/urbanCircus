@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/gameover.wav-bed6ee6146d934c13c7e9c5ad09d20fa.sample"
+
+[deps]
+
+source_file="res://Sprites/Non organized/gameover.wav"
+dest_files=[ "res://.import/gameover.wav-bed6ee6146d934c13c7e9c5ad09d20fa.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
