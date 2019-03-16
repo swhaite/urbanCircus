@@ -9,7 +9,7 @@ var velocity = Vector2()
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
-	var m1 = Singleton.Monster.new("Tyler");
+	var m1 = Singleton.Monster.new('Tyguy')
 	
 	
 
