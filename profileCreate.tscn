@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://createHUD.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="createHUD" type="CanvasLayer" parent="."]
+script = ExtResource( 1 )
+
+[node name="playerName" type="TextEdit" parent="createHUD"]
+margin_left = 209.0
+margin_top = 277.0
+margin_right = 684.0
+margin_bottom = 358.0
+text = "Enter Player Name"
+
+[node name="createButton" type="Button" parent="createHUD"]
+margin_left = 208.912
+margin_top = 417.824
+margin_right = 686.912
+margin_bottom = 489.824
+text = "Submit"
+
+[connection signal="pressed" from="createHUD/createButton" to="createHUD" method="_on_createButton_pressed"]
