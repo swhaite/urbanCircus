@@ -20,9 +20,12 @@ func _on_createButton_pressed():
 	metaData.profile = {"name" : $playerName.text, "items" : {}, "monsters" : {}}
 	var s = JSON.print(metaData.profile)
 	var file = File.new()
-	if file.open("user://"+$playerName.text +".sav", File.WRITE) != 0:
-    	print("Error opening file")
-    	return
+	var dir = Directory.new()
+	dir.open("user://")
+	dir.make_dir("gameSaves")
+	if file.open("user://gameSaves/"+ $playerName.text +".sav", File.WRITE) != 0:
+		print("Error opening file")
+		return
 	file.store_line(s)
 	file.close()
 	file.open("res://profileNames.meta", File.WRITE)
