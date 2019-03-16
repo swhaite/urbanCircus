@@ -21,4 +21,12 @@ margin_right = 686.912
 margin_bottom = 489.824
 text = "Submit"
 
+[node name="errorLabel" type="Label" parent="createHUD"]
+visible = false
+margin_left = 229.461
+margin_top = 195.213
+margin_right = 591.461
+margin_bottom = 254.213
+text = "Profile with that name already exists. Choose another name."
+
 [connection signal="pressed" from="createHUD/createButton" to="createHUD" method="_on_createButton_pressed"]

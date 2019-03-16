@@ -30,4 +30,12 @@ margin_right = 92.5
 margin_bottom = 28.5
 text = "start game"
 
+[node name="loadGameButton" type="Button" parent="HUD"]
+margin_left = 412.268
+margin_top = 373.415
+margin_right = 605.268
+margin_bottom = 434.415
+text = "load game"
+
 [connection signal="pressed" from="HUD/newGameButton" to="HUD" method="_on_newGameButton_pressed"]
+[connection signal="pressed" from="HUD/loadGameButton" to="HUD" method="_on_loadGameButton_pressed"]

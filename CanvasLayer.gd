@@ -16,3 +16,6 @@ func _on_newGameButton_pressed():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func _on_loadGameButton_pressed():
+	get_tree().change_scene("res://profileLoad.tscn")

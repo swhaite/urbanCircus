@@ -14,12 +14,20 @@ func _ready():
 
 
 func _on_createButton_pressed():
+	if metaData.profileNames.has($playerName.text) or !$playerName.text.is_valid_identifier():
+		$errorLabel.visible = true
+		return
 	metaData.profile = {"name" : $playerName.text, "items" : {}, "monsters" : {}}
 	var s = JSON.print(metaData.profile)
 	var file = File.new()
-	if file.open("user://gameSaves/"+$playerName.text +".sav", File.WRITE) != 0:
+	if file.open("user://"+$playerName.text +".sav", File.WRITE) != 0:
     	print("Error opening file")
     	return
 	file.store_line(s)
+	file.close()
+	file.open("res://profileNames.meta", File.WRITE)
+	metaData.profileNames.append($playerName.text);
+	print(metaData.profileNames)
+	file.store_string(JSON.print(metaData.profileNames))
 	file.close()
 	get_tree().change_scene("res://main.tscn")
